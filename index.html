@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="color-scheme" content="dark" />
+  <title>Placement Intelligence â€” Internal Prototype</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="noise"></div>
+  <aside class="sidebar">
+    <div class="brand"><span class="brand-mark">lG</span><span>loanGen</span></div>
+    <nav>
+      <button class="nav-item"><span class="nav-icon">âŒ‚</span>Home</button>
+      <button class="nav-item"><span class="nav-icon">â–±</span>Applications <span class="badge">12</span></button>
+      <button class="nav-item active"><span class="nav-icon spark">âœ¦</span>Placement Intelligence</button>
+      <button class="nav-item"><span class="nav-icon">â—Ž</span>Partners</button>
+      <button class="nav-item"><span class="nav-icon">âŒ</span>Analytics</button>
+    </nav>
+    <div class="sidebar-bottom">
+      <div class="environment"><span></span> Prototype environment</div>
+      <div class="user">
+        <div class="avatar">MC</div>
+        <div><strong>Michael Chen</strong><small>Senior Advisor</small></div>
+        <span class="more">â€¢â€¢â€¢</span>
+      </div>
+    </div>
+  </aside>
+
+  <main>
+    <header class="topbar">
+      <div class="crumbs"><span>Applications</span><b>/</b><span>LG-2847</span><b>/</b><strong>Placement Intelligence</strong></div>
+      <div class="top-actions"><button class="icon-btn" aria-label="Search">âŒ•</button><button class="icon-btn" aria-label="Notifications">â—‹</button><div class="prototype-pill"><span></span>Internal prototype</div></div>
+    </header>
+
+    <div class="workspace">
+      <section class="application-strip">
+        <div class="company-logo">NR</div>
+        <div class="company-heading">
+          <div><h1>Northstar Radiology Group</h1><span class="status"><i></i>Application received</span></div>
+          <p>Healthcare Â· Diagnostic imaging Â· Tampa, FL</p>
+        </div>
+        <div class="app-meta">
+          <div><span>REQUEST</span><strong>$385,000</strong></div>
+          <div><span>ANNUAL REVENUE</span><strong>$2.84M</strong></div>
+          <div><span>TIME IN BUSINESS</span><strong>6.8 years</strong></div>
+          <div><span>APPLICATION</span><strong>LG-2847</strong></div>
+        </div>
+      </section>
+
+      <section id="launch-view" class="launch-view">
+        <div class="launch-orb"><div class="orb-core">âœ¦</div><div class="ring r1"></div><div class="ring r2"></div></div>
+        <span class="eyebrow">PLACEMENT INTELLIGENCE</span>
+        <h2>Turn application data into<br><em>placement strategy.</em></h2>
+        <p>Analyze this completed application against lender criteria, historical outcomes, and your partner network.</p>
+        <button id="generate-btn" class="primary-btn"><span>âœ¦</span>Generate Placement Intelligence <b>â†’</b></button>
+        <div class="data-ready"><span>âœ“</span><div><strong>Application data is ready</strong><small>Application, bank statements, and identity documents verified</small></div></div>
+      </section>
+
+      <section id="analysis-view" class="analysis-view hidden">
+        <div class="analysis-card">
+          <div class="scanner"><div class="scanner-glow"></div><span>âœ¦</span></div>
+          <span class="eyebrow">GENERATING PLACEMENT STRATEGY</span>
+          <h2 id="analysis-title">Reading application</h2>
+          <p id="analysis-subtitle">Extracting business and ownership profile...</p>
+          <div class="progress-track"><div id="progress-fill"></div></div>
+          <div class="progress-meta"><span id="progress-count">1 of 6</span><span id="progress-percent">8%</span></div>
+          <div id="analysis-steps" class="analysis-steps"></div>
+        </div>
+        <p class="processing-note">You can leave this page. Weâ€™ll notify you when the report is ready.</p>
+      </section>
+
+      <section id="report-view" class="report-view hidden">
+        <div class="report-header">
+          <div><span class="eyebrow">PLACEMENT REPORT</span><h2>Northstar Radiology Group</h2><p>Generated moments ago Â· Based on application LG-2847</p></div>
+          <div class="report-actions"><button id="regenerate-btn" class="secondary-btn">â†» Regenerate</button><button id="export-btn" class="secondary-btn">â‡© Export report</button></div>
+        </div>
+
+        <div class="report-layout">
+          <nav class="report-nav">
+            <button class="active" data-target="overview"><span>01</span>Overview</button>
+            <button data-target="strategy"><span>02</span>Placement Strategy</button>
+            <button data-target="underwriter"><span>03</span>Underwriter Summary</button>
+            <button data-target="relationship"><span>04</span>Relationship Intelligence</button>
+            <button data-target="network"><span>05</span>Network Intelligence</button>
+            <button data-target="learning"><span>06</span>Learning Intelligence</button>
+          </nav>
+
+          <div class="report-content">
+            <section id="overview" class="report-section">
+              <div class="section-heading"><div><span class="section-number">01</span><h3>Business overview</h3></div><span class="confidence-chip">High data confidence</span></div>
+              <div class="memo-card overview-card">
+                <div class="overview-copy"><p class="lead">Established outpatient imaging practice seeking equipment financing to add a second MRI system and expand patient capacity.</p><div class="detail-grid"><div><span>FUNDING PURPOSE</span><strong>Siemens MAGNETOM MRI system</strong></div><div><span>INDUSTRY</span><strong>Diagnostic imaging centers</strong></div><div><span>OWNERSHIP</span><strong>Dr. Maya Patel Â· 100%</strong></div><div><span>LOCATION</span><strong>Tampa, Florida</strong></div></div></div>
+                <div class="score-panel"><span>FUNDING CONFIDENCE</span><div class="score"><strong>91</strong><small>/100</small></div><div class="score-bar"><i style="width:91%"></i></div><p>Strong candidate</p></div>
+              </div>
+              <div class="signal-grid">
+                <article class="signal positive"><span class="signal-icon">â†—</span><div><small>BUSINESS STRENGTH</small><strong>Strong</strong><p>Consistent deposits, stable margins, established operating history.</p></div></article>
+                <article class="signal caution"><span class="signal-icon">â—‡</span><div><small>RISK PROFILE</small><strong>Lowâ€“moderate</strong><p>Existing equipment debt is manageable but limits short-term leverage.</p></div></article>
+                <article class="signal"><span class="signal-icon">â‰‹</span><div><small>CASH FLOW COVERAGE</small><strong>1.42Ã—</strong><p>Above the 1.25Ã— program benchmark after proposed payment.</p></div></article>
+              </div>
+            </section>
+
+            <section id="strategy" class="report-section">
+              <div class="section-heading"><div><span class="section-number">02</span><h3>Recommended strategy</h3></div><span class="update-label">3 matched programs</span></div>
+              <div class="recommendation primary-rec"><div class="rec-rank">01</div><div class="rec-main"><div class="rec-title"><div><span class="label">PRIMARY PRODUCT</span><h4>Equipment Finance Agreement</h4></div><span class="match">96% match</span></div><p>Preserves working capital, aligns the asset life with the repayment term, and avoids a blanket lien on the operating business.</p><div class="rec-stats"><div><span>EST. APPROVAL</span><strong>$385K</strong></div><div><span>RATE RANGE</span><strong>8.2â€“9.6%</strong></div><div><span>TERM</span><strong>60â€“72 mo.</strong></div><div><span>FUNDING TIME</span><strong>2â€“4 days</strong></div></div></div></div>
+              <div class="recommendation"><div class="rec-rank">02</div><div class="rec-main"><div class="rec-title"><div><span class="label">SECONDARY PRODUCT</span><h4>SBA 7(a) Term Loan</h4></div><span class="match muted">82% match</span></div><p>Lower cost of capital and longer amortization, with slower closing and additional documentation requirements.</p><div class="rec-stats"><div><span>EST. APPROVAL</span><strong>$425K</strong></div><div><span>RATE RANGE</span><strong>7.7â€“8.5%</strong></div><div><span>TERM</span><strong>10 years</strong></div><div><span>FUNDING TIME</span><strong>21â€“35 days</strong></div></div></div></div>
+
+              <div class="subheading"><h4>Submission order</h4><span>Optimized for approval probability and speed</span></div>
+              <div class="submission-table">
+                <div class="table-head"><span>ORDER / PARTNER</span><span>RATIONALE</span><span>PROBABILITY</span><span>ACTION</span></div>
+                <div class="table-row"><div><b>1</b><span class="partner-logo blue">AP</span><strong>Apex Medical Finance<small>Equipment specialist</small></strong></div><p>Best healthcare fit; accepts stated projections for new imaging capacity.</p><span class="prob high">94%</span><button class="row-action">Prepare submission</button></div>
+                <div class="table-row"><div><b>2</b><span class="partner-logo purple">NV</span><strong>Northview Capital<small>General equipment</small></strong></div><p>Strong credit box fit and competitive 60-month program.</p><span class="prob">87%</span><button class="row-action">View criteria</button></div>
+                <div class="table-row"><div><b>3</b><span class="partner-logo green">HF</span><strong>Harbor Federal<small>SBA preferred lender</small></strong></div><p>Use if borrower prioritizes payment over speed to close.</p><span class="prob">79%</span><button class="row-action">View criteria</button></div>
+              </div>
+            </section>
+
+            <section id="underwriter" class="report-section">
+              <div class="section-heading"><div><span class="section-number">03</span><h3>AI underwriter summary</h3></div><button id="copy-summary" class="copy-btn">â–¡ Copy summary</button></div>
+              <div class="underwriter-card">
+                <div class="memo-top"><span>SUBMISSION MEMO</span><span>Ready for review</span></div>
+                <div id="summary-text" class="memo-body"><p><strong>Northstar Radiology Group</strong> is a six-year-old outpatient imaging practice generating $2.84MM in annual revenue. The business is requesting $385K to acquire a Siemens MAGNETOM MRI system, expanding daily scan capacity from 18 to approximately 31 patients.</p><p>Cash flow demonstrates consistent operating performance, with average monthly deposits of $238K and no negative days across the six statements reviewed. Pro forma debt service coverage is estimated at 1.42Ã—. The guarantor has a 742 FICO with clean repayment history and 38% revolving utilization.</p><p>Primary considerations are $164K in existing equipment obligations and moderate customer concentration among three regional health plans. Both are mitigated by strong historical performance, contracted referral relationships, and projected equipment utilization above 70% within six months.</p><p><strong>Recommendation:</strong> Proceed with a 60â€“72 month equipment finance structure. Position the request around established cash flow, the essential-use nature of the asset, and documented referral demand.</p></div>
+                <div class="memo-footer"><span>Generated from verified application data</span><span>Advisor review required before submission</span></div>
+              </div>
+              <div class="subheading"><h4>Predicted stipulations</h4><span>Based on the recommended program</span></div>
+              <div class="stip-list">
+                <div><span class="stip-check">âœ“</span><strong>Driver license<small>Guarantor identity verification</small></strong><b class="received">Received</b></div>
+                <div><span class="stip-check">âœ“</span><strong>Last 6 months business bank statements<small>Operating account ending 4821</small></strong><b class="received">Received</b></div>
+                <div><span class="stip-check pending">â—‹</span><strong>Voided business check<small>Required prior to funding</small></strong><b>Needed</b></div>
+                <div><span class="stip-check pending">â—‹</span><strong>Equipment invoice<small>Final invoice with serial number</small></strong><b>Needed</b></div>
+                <div><span class="stip-check pending">â—‹</span><strong>2025 business tax return<small>Likely requested above $350K exposure</small></strong><b>Predicted</b></div>
+              </div>
+            </section>
+
+            <section id="relationship" class="report-section">
+              <div class="section-heading"><div><span class="section-number">04</span><h3>Relationship intelligence</h3></div></div>
+              <div class="relationship-hero"><div class="relationship-score"><span>RELATIONSHIP POTENTIAL</span><div><strong>9.4</strong><small>/10</small></div><p>â˜…â˜…â˜…â˜…â˜…</p></div><div class="relationship-copy"><h4>High-value, multi-product relationship</h4><p>Northstarâ€™s growth profile and transaction volume suggest meaningful expansion beyond this financing event.</p><div class="value-est"><span>ESTIMATED 3-YEAR RELATIONSHIP VALUE</span><strong>$186,400</strong></div></div></div>
+              <div class="subheading"><h4>Future opportunities</h4><span>Sequenced by estimated readiness</span></div>
+              <div class="opportunity-grid">
+                <article><span class="opp-icon">â†—</span><div><span>30 DAYS</span><h5>Business line of credit</h5><p>Seasonal working capital buffer for payer reimbursement cycles.</p></div><b>High fit</b></article>
+                <article><span class="opp-icon">â–¦</span><div><span>90 DAYS</span><h5>Treasury management</h5><p>$2.8M annual deposit flow supports lockbox and receivables services.</p></div><b>High fit</b></article>
+                <article><span class="opp-icon">â—‡</span><div><span>180 DAYS</span><h5>Commercial cards</h5><p>Consolidate approximately $31K in monthly vendor spend.</p></div><b>Medium fit</b></article>
+                <article><span class="opp-icon">â—Ž</span><div><span>365 DAYS</span><h5>Real estate financing</h5><p>Lease expires in 22 months; ownership expressed interest in acquisition.</p></div><b>Emerging</b></article>
+              </div>
+            </section>
+
+            <section id="network" class="report-section wow-section">
+              <div class="section-heading"><div><span class="section-number">05</span><h3>Network intelligence</h3></div><span class="live-chip"><i></i>Network analysis</span></div>
+              <div class="coverage-card">
+                <div class="coverage-visual"><div class="coverage-ring"><div><strong>92%</strong><span>COVERAGE</span></div></div></div>
+                <div class="coverage-copy"><span>CURRENT NETWORK COVERAGE</span><h4>Your lender network covers most of Northstarâ€™s placement profile.</h4><p>Coverage is strong across general equipment, SBA, and working capital programs. One material specialization gap limits capture of similar opportunities.</p></div>
+              </div>
+              <div class="gap-card">
+                <div class="gap-alert">!</div>
+                <div class="gap-main"><span class="gap-label">NETWORK GAP DETECTED</span><h4>Healthcare equipment finance</h4><p>Your network lacks a partner dedicated to diagnostic imaging and essential-use medical equipment above $500K.</p><div class="suggested"><span>SUGGESTED PARTNER PROFILE</span><strong>Specialized Healthcare Equipment Finance</strong><p>National coverage Â· $250Kâ€“$5M tickets Â· Vendor programs Â· Up to 84-month terms</p></div></div>
+                <div class="gap-impact"><span>EST. ADDITIONAL<br>ANNUAL VOLUME</span><strong>$43M</strong><div><i></i>High confidence</div></div>
+              </div>
+            </section>
+
+            <section id="learning" class="report-section">
+              <div class="section-heading"><div><span class="section-number">06</span><h3>Learning intelligence</h3></div></div>
+              <div class="learning-intro"><span class="learn-spark">âœ¦</span><div><span>THIS RECOMMENDATION IS INFORMED BY</span><h4>1,872 similar businesses</h4><p>Healthcare services Â· $1Mâ€“$5M revenue Â· Equipment financing Â· 5+ years operating</p></div></div>
+              <div class="learning-stats"><div><span>HISTORICAL APPROVAL RATE</span><strong>94%</strong><div class="mini-chart bars"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div></div><div><span>AVERAGE FUNDING</span><strong>$143,000</strong><p>Median: $118,500</p></div><div><span>AVERAGE TIME TO FUND</span><strong>2.4 days</strong><p>Top quartile: 1.2 days</p></div></div>
+              <div class="closing-statement"><span>âœ¦</span><h3>Every completed application makes loanGen smarter.</h3><p>Placement decisions become more precise. Partner networks become more valuable. Advisors become more effective.</p></div>
+            </section>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+  <div id="toast" class="toast">Copied to clipboard</div>
+  <script src="app.js"></script>
+</body>
+</html>
