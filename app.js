@@ -22,7 +22,7 @@ const steps = [
 function renderSteps(active) {
   stepsEl.innerHTML = steps.map((step, index) => {
     const state = index < active ? 'done' : index === active ? 'current' : '';
-    const icon = index < active ? 'âœ“' : index === active ? 'âœ¦' : String(index + 1);
+    const icon = index < active ? 'OK' : index === active ? '...' : String(index + 1);
     return `<div class="analysis-step ${state}"><span class="step-icon">${icon}</span><span>${step[0]}</span></div>`;
   }).join('');
 }
