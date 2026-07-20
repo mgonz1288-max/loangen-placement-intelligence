@@ -1,4 +1,5 @@
 import './styles.css';
+import './placement.css';
 
 export const metadata = {
   title: 'Placement Intelligence | loanGen',
