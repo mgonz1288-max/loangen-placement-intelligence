@@ -1,0 +1,38 @@
+.lender-row.top-placement {
+  background: #f2f8f5;
+  box-shadow: inset 3px 0 #3d8669;
+}
+
+.underwriting-fit > p {
+  color: #66727c;
+  font-size: 9px;
+  line-height: 1.5;
+  margin: 0 0 7px;
+}
+
+.underwriting-fit > div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+.underwriting-fit > div > span {
+  background: #e9f1ed;
+  border: 1px solid #d3e2da;
+  border-radius: 3px;
+  color: #4f6d60;
+  font-size: 7px;
+  font-weight: 700;
+  padding: 3px 5px;
+}
+
+.lender-row {
+  min-height: 82px;
+}
+
+@media (max-width: 760px) {
+  .table-head,
+  .lender-row {
+    min-width: 850px;
+  }
+}
