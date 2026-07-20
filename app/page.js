@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import { Activity, ArrowRight, BadgeCheck, Banknote, Building2, Check, ChevronRight, CircleDollarSign, Clock3, Copy, FileCheck2, FileText, Gauge, LayoutDashboard, Network, RefreshCw, Search, ShieldCheck, Sparkles, Target, TrendingUp, UsersRound } from 'lucide-react';
+import { ArrowRight, BadgeCheck, Building2, Check, ChevronRight, CircleDollarSign, Clock3, Copy, FileCheck2, FileText, Gauge, LayoutDashboard, Network, RefreshCw, Search, ShieldCheck, Sparkles, Target, TrendingUp, UsersRound } from 'lucide-react';
 
 const analysisSteps = [
   ['Reading application', 'Business, ownership, and funding request'],
@@ -79,7 +79,7 @@ export default function PlacementIntelligence() {
         <div className="application-stats"><Stat label="REQUEST" value="$385,000"/><Stat label="ANNUAL REVENUE" value="$2.84M"/><Stat label="TIME IN BUSINESS" value="6.8 years"/><Stat label="APPLICATION" value="LG-2847"/></div>
       </section>
 
-      <Activity mode={screen === 'ready' ? 'visible' : 'hidden'}>
+      {screen === 'ready' &&
         <section className="ready-screen">
           <div className="ai-mark"><Sparkles size={28}/></div>
           <span className="kicker">PLACEMENT INTELLIGENCE</span>
@@ -88,9 +88,9 @@ export default function PlacementIntelligence() {
           <button className="primary" onClick={startAnalysis}><Sparkles size={16}/>Generate placement intelligence<ArrowRight size={16}/></button>
           <div className="ready-data"><BadgeCheck size={20}/><div><b>Application data is ready</b><small>Application, bank statements, and identity documents verified</small></div></div>
         </section>
-      </Activity>
+      }
 
-      <Activity mode={screen === 'analyzing' ? 'visible' : 'hidden'}>
+      {screen === 'analyzing' &&
         <section className="analyzing-screen">
           <div className="analysis-panel">
             <div className="analysis-head"><div className="scan-icon"><Sparkles size={21}/><i/></div><div><span className="kicker">GENERATING PLACEMENT STRATEGY</span><h2>{activeStep >= analysisSteps.length ? 'Analysis complete' : analysisSteps[activeStep]?.[0]}</h2><p>{activeStep >= analysisSteps.length ? 'The placement report is ready for advisor review.' : analysisSteps[activeStep]?.[1]}</p></div></div>
@@ -99,9 +99,9 @@ export default function PlacementIntelligence() {
             <div className="steps">{analysisSteps.map(([title], i) => <div className={i < activeStep ? 'done' : i === activeStep ? 'current' : ''} key={title}><span>{i < activeStep ? <Check size={12}/> : i + 1}</span><b>{title}</b>{i === activeStep && <small>In progress</small>}</div>)}</div>
           </div>
         </section>
-      </Activity>
+      }
 
-      <Activity mode={screen === 'report' ? 'visible' : 'hidden'}>
+      {screen === 'report' &&
         <section className="report">
           <div className="report-title"><div><span className="kicker">PLACEMENT REPORT</span><h2>Northstar Radiology Group</h2><p>Application LG-2847 · Generated for advisor review</p></div><button className="secondary" onClick={startAnalysis}><RefreshCw size={14}/>Regenerate</button></div>
 
@@ -135,7 +135,7 @@ export default function PlacementIntelligence() {
           <div className="learning card"><div><Sparkles size={24}/><span><small>LEARNING INTELLIGENCE</small><h3>Informed by 1,872 similar businesses</h3><p>Healthcare services · $1–5 million revenue · Equipment financing · Five or more years in business</p></span></div><div className="learning-stats"><Stat label="HISTORICAL APPROVAL RATE" value="94%"/><Stat label="AVERAGE FUNDING" value="$143,000"/><Stat label="AVERAGE TIME TO FUND" value="2.4 days"/></div></div>
           <div className="final-line"><Sparkles size={22}/><h2>Every completed application makes loanGen smarter.</h2></div>
         </section>
-      </Activity>
+      }
     </main>
   </div>;
 }
